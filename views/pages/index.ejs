@@ -1,0 +1,25 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav') -%>
+
+<!-- start of CodeSquad comics explanation text-->
+    <div class="container-content">
+        <h1>CODESQUAD COMICS</h1>
+        <p>CodeSquad Comics is a collection of graphic novels read by Your Name. The site is intended to display comic book covers along with information about each book, including the author, a rating, and other details about the graphic novel. Browse through the complete collection below. Click on the cover image or the Details link to see even more information for each graphic novel including the publisher, genre, number of pages, and a brief synopsis. The About page includes meta information about this collection. Login is only available to the site administrator at this time.</p>
+    </div>    
+<!-- end of CodeSquad comics explanation text -->
+<!-- start of comic book display -->
+    <div class="container-content">
+        <h2>COMPLETE COLLECTION</h2>
+        <div class="container-book-rows-index" id="container-book-rows-index">
+            <!-- loop comics here within a partial -->
+            <% comics.forEach( comic => { %>
+              <%- include ('../partials/single-book', {comic: comic}) %>
+            <% }) %>
+        </div>
+        <div class="button-container-center">
+            <button class="button-yellow" onclick="displayMore()">
+                DISPLAY MORE
+            </button>
+        </div>
+    </div>
+    <%- include('../partials/footer') -%>

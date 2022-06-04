@@ -1,0 +1,37 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav') -%>
+<!-- start of comic card -->
+    <div class="container-comic-card">
+        <div class="container-comic-card-header">
+            <h2><%= foundBook.title %></h2>
+            <div class="container-image-comic-card">
+                <img class="image-comic-card" src="/images/<%= foundBook.image %>" alt="<%= foundBook.title %> comic book cover">
+            </div>
+        </div>
+
+        <div class="container-comic-card-text">
+            <span>
+                <span class="text-comic-card-details-category">Title:</span>
+                <i> <%= foundBook.title %></i>
+                <br /><br />
+                <span class="text-comic-card-details-category">Author:</span>
+                <%= foundBook.author %>
+                <br /><br />
+                <span class="text-comic-card-details-category">Publisher:</span>
+                <%= foundBook.publisher %>
+                <br /><br />
+                <span class="text-comic-card-details-category">Genre:</span>
+                <%= foundBook.genre %>
+                <br /><br />
+                <span class="text-comic-card-details-category">Number of pages:</span>
+                <%= foundBook.pages %>
+                <br /><br />
+                <span class="text-comic-card-details-category">Rating:</span>
+                <%= foundBook.rating %>
+                <br /><br />
+                <span class="text-comic-card-details-category">Synopsis:</span>
+                <%= foundBook.synopsis %>
+            </span>
+        </div>
+    </div>
+<%- include('../partials/footer') -%>

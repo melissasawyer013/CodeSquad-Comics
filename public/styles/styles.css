@@ -1,0 +1,456 @@
+/* general and all pages */
+
+:root {
+    --teal: #006B6B;
+    --light-teal: #009E9E;
+    --yellow: #FCCF14;
+    --blue: #063C5E;
+    --grey: #C2C2C2;
+    --gray: #C2C2C2;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    /* font-size: max(1.4rem, 1.1rem); */
+    background-image: linear-gradient(var(--white), var(--light-teal), var(--teal));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container-content {
+    background-color: var(--white);
+    width: 75%;
+    padding: 2em;
+    margin: 3.5em 0 0 0;
+    border: 5px solid var(--blue);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: var(--blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.button-container-center {
+    width: 100%;
+    vertical-align: center;
+    text-align: center;
+}
+
+.button-yellow {
+    width: auto;
+    max-width: 200px;
+    min-width: 100px;
+    text-align: center;
+    vertical-align: center;
+    padding: .2em .4em;
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-size: 1.1rem;
+}
+
+.button-blue {
+    width: auto;
+    min-width: 100px;
+    text-align: center;
+    vertical-align: center;
+    padding: .2em .4em;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.button-wrapper {
+  margin-top: 2em;
+}
+
+.form-container {
+    width: 50%;
+    text-align: right;
+    margin-right: 5em;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea,
+.form-container select {
+    box-sizing: border-box;
+    width: 50%;
+    padding: .2em;
+    color: gray;
+}
+
+.form-container input[type="email"]:valid,
+.form-container input[type="password"]:valid {
+  border-color: green;
+}
+
+.form-container input[type="email"].error,
+.form-container input[type="password"].error {
+  border-color: red;
+}
+
+.form-container textarea {
+    height: 150px;
+    resize: none;
+}
+
+.text-area-label {
+    height: 150px;
+    vertical-align: top;
+}
+
+/* form media queries */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    .form-container {
+        width: 100%;
+        text-align: left;
+    }
+
+    .form-container input[type=text],
+    .form-container input[type=number],
+    .form-container textarea,
+    .form-container input[type=password],
+    .form-container select {
+        width: 100%;
+    }
+}
+
+/* navbar */
+.nav-container {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 0;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.nav-logo-container {
+    width: 20%;
+    height: fit-content;
+    margin: 1em;
+    min-width: 200px;
+    vertical-align: center;
+}
+
+.nav-logo {
+    width: 100%;
+    height: auto; 
+}
+
+.nav-container ul {
+    display: flex;
+    flex-direction: row;
+    min-width: fit-content;
+    width: 50%;
+    max-width: 65%;
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+
+.nav-container li {
+    list-style-type: none;
+    min-width: fit-content;
+    width: 15%;
+    margin: 0 1em;
+    text-align: center;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.nav-container a:link,
+.nav-container a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-container a:hover {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.nav-container a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.nav-menu-icon {
+    display: none;
+}
+
+/* navbar media queries */
+/* ADD YOUR OWN CODE HERE */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .nav-container ul {
+        display: none;
+    }
+
+    .nav-container .nav-menu-icon {
+        display: block;
+        float: right;
+        margin-right: 1em;
+        font-size: 2rem;
+    }
+
+    .navbar.open {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        float: left;
+        width: 100%;
+    }
+
+    .navbar.open li {
+        margin: 0.5em 1em;  
+    }
+}
+
+/* index */
+/* .image-cover-index {
+    width: 100%;
+    height: auto;
+} */
+
+.image-cover-index {
+    height: auto;
+    width: 100%;
+}
+
+.container-book-rows-index {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container-single-book-index {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    min-width: 200px;
+    text-align: center;
+    margin: 1em;
+}
+
+.container-single-book-index a:link,
+.container-single-book-index a:visited {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.container-single-book-index a:hover {
+    color: var(--teal);
+    font-weight: bold;
+}
+
+.container-single-book-index a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+
+/* admin page */
+.table-container {
+    width: 80%;
+    margin: 0 0 2em 0;
+    border: 2px solid var(--blue);
+    border-collapse: collapse;
+}
+
+.table-container tr {
+    height: 50px;
+}
+
+.table-container tr:nth-child(odd) {
+    background-color: var(--grey);
+}
+
+.table-container th,
+.table-container td {
+    border: 2px solid var(--blue);
+    padding: 0 .5em;
+}
+
+/* comic card */
+.container-comic-card {
+    width: 45%;
+    height: auto;
+    border: 5px solid var(--yellow);
+    border-radius: 40px;
+    background-color: var(--blue);
+    margin: 3.5em 0 0 0;
+}
+
+.container-comic-card h2 {
+    text-align: center;
+    color: var(--yellow);
+}
+
+.container-image-comic-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5em;
+}
+
+.image-comic-card {
+    width: 70%;
+    height: auto;
+    border: 3px var(--white) solid;
+    border-radius: 40px;
+}
+
+.container-comic-card-text {
+    max-width: 100%;
+    border-top: 4px var(--yellow) solid;
+    padding: 2em;
+    margin: 0;
+    background-color: var(--white);
+    border-bottom-right-radius: 34px;
+    border-bottom-left-radius: 34px;
+}
+
+.text-comic-card-details-category {
+    text-decoration: underline;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+/* comic card media queries */
+/* ADD YOUR OWN CODE HERE */
+@media screen and (min-width: 1024px) {
+    .container-comic-card {
+        width: 85%;
+        display: flex;
+    }
+
+    .container-comic-card-header {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.5em;
+        min-width: 40%;
+    }
+
+    .container-comic-card-text {
+        border: none;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 34px;
+    }
+}
+
+/* footer */
+.footer-container {
+    width: 100%;
+    margin: 3.5em 0 0 0;
+    padding: 0;
+    background-color: var(--blue);
+    height: auto;
+    border-top: 5px solid var(--yellow);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.footer-container-group {
+    width: fit-content;
+    max-width: 20%;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1em 0 2em 2em;
+}
+
+.footer-container h3 {
+    color: var(--yellow);
+}
+
+.footer-container a:link,
+.footer-container a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    color: var(--yellow);
+    font-weight: bold;
+}
+
+.footer-container a:active {
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.footer-logo {
+    min-width: 50px;
+    max-width: 300px;
+    height: auto;
+    width: 80%;
+    margin: 0;
+}
+
+.footer-container-font-awesome {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.footer-container-font-awesome a:link,
+.footer-container-font-awesome a:visited {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-container-font-awesome a:hover,
+.footer-container-font-awesome a:active {
+    color: var(--yellow);
+    font-weight: bold;
+    background-color: var(--blue);
+}
+
+/* footer media queries */
+/* ADD YOUR OWN CODE HERE */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}

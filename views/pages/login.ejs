@@ -1,0 +1,26 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav') -%>
+    
+    <div class="container-content">
+        <div class="form-container">
+            <h1>LOGIN</h1>
+            <form id="login-form" action="/login" method="POST">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" placeholder="username" required>
+                <br /> <br />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <br /> <br /> <br />
+                <div class="button-container-center">
+                    <input class="button-yellow" type="submit">
+                </div>
+                
+            </form>
+        </div>
+        <div class="button-wrapper">
+          <a href="/auth/google">
+            <button class="button-yellow">Sign In with Google</button>
+          </a>
+        </div>
+    </div>
+<%- include('../partials/footer') -%>

@@ -1,0 +1,12 @@
+<div class="container-single-book-index">
+  <a href="./books/<%= comic._id %>">
+      <img class="image-cover-index" src="./images/<%= comic.image %>" alt="<%= comic.title %>">
+  </a>
+  <br />
+  <span>
+      <i><%= comic.title %></i><br />
+      by <%= comic.author %><br />
+      <%= comic.rating %> stars<br />
+      <a href="./books/<%= comic._id %>">Details</a>
+  </span>
+</div>

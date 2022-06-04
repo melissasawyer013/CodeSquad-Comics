@@ -1,0 +1,13 @@
+<tr>
+  <td><%= comic.title %></td>
+  <td>
+      <a href="/admin-console/update-book/<%= comic._id %>">
+        <button class="button-blue">EDIT</button>
+      </a>
+  </td>
+  <td>
+    <form action="/books/<%= comic._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded">
+      <button class="button-yellow" type="submit">DELETE</button>
+    </form>   
+  </td>
+</tr>

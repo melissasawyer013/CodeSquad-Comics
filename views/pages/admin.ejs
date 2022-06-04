@@ -1,0 +1,28 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav', {user:user}) -%>
+    <div class="container-content">
+      <a href="/logout">
+        <button class="button-yellow"> Logout</button>
+    </a>
+        <h1>ADMIN PAGE</h1>
+        <div class="button-container-center">
+            <a href="/admin-console/create-book"><button class="button-yellow">ADD NEW COMIC</button></a>
+        </div>
+        <br /> <br />
+<!-- start of admin table -->
+        <table class="table-container">
+<!-- start of table header row -->
+            <tr>
+                <th>COMIC TITLE</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
+            </tr>
+<!-- end of table header row | start of table row 1-->
+            <% comics.forEach(comic => { %>
+              <%- include ('../partials/book-listing', {comic: comic}) %>
+            <% }) %>
+<!-- end of table row 1 | start of table row 2-->
+        </table>
+    </div>
+<!-- end of admin table -->
+<%- include('../partials/footer') -%>

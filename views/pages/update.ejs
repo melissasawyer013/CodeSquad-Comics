@@ -1,0 +1,51 @@
+<%- include('../partials/head') -%>
+<%- include('../partials/nav') -%>
+    <div class="container-content">
+        <h1>UPDATE COMIC</h1>
+<!-- start of form -->
+
+        <div class="form-container">
+            <form action="/books/<%= foundBook._id %>?_method=PUT" method="POST" enctype="application/x-www-form-urlencoded">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" value="<%= foundBook.title %>" required>
+                <br /> <br />
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" value="<%= foundBook.author %>" required>
+                <br /> <br />
+                <label for="publisher">Publisher:</label>
+                <select id="publisher" name="publisher">
+                    <option value="boom-box">BOOM! Box</option >
+                    <option value="dc-comics">DC Comics</option>
+                    <option value="harry-n-abrams">Harry N. Abrams</option>
+                    <option value="icon-books">Icon Books</option>
+                    <option value="image-comics">Image Comics</option>
+                    <option value="marvel">Marvel</option>
+                    <option value="simon-schuster">Simon Schuster</option>
+                    <option value="top-shelf-productions">Top Shelf Productions</option>
+                    <option value="viz-media-llc">VIZ Media LLC</option>
+                    <option value="<%= foundBook.publisher %>" selected><%= foundBook.publisher %></option>
+                </select>
+                <br /> <br />
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" value="<%= foundBook.genre %>">
+                <br /> <br />
+                <label for="pages">Number of pages:</label>
+                <input type="text" id="pages" name="pages" value="<%= foundBook.pages %>">
+                <br /> <br />
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" min="0" max="5" value="<%= foundBook.rating %>">
+                <br /> <br />
+                <label for="synopsis">Synopsis:</label>
+                <textarea class="text-area-label" name="synopsis" id="synopsis"><%= foundBook.synopsis %></textarea>
+                <br /> <br />
+                <label for="image">Image:</label>
+                <input type="text" id="image" name="image" value="<%= foundBook.image %>">
+                <br /> <br /> <br />
+                <div class="button-container-center">
+                    <input class="button-yellow" type="submit">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <%- include('../partials/footer') -%>
